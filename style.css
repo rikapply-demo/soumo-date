@@ -1,0 +1,228 @@
+:root {
+    --bg-color: #fcf8f2;
+    --card-bg: #f9f4eb;
+    --text-main: #3d2424;
+    --accent-pink: #f2a6b2;
+    --accent-pink-hover: #e0929f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+.card {
+    background-color: var(--card-bg);
+    width: 100%;
+    max-width: 540px;
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    position: relative;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.screen.active {
+    display: flex;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 34px;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.gif-container img {
+    max-width: 180px;
+    margin-bottom: 20px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    min-height: 80px;
+    position: static;
+}
+
+.btn {
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.yes-btn, .submit-btn {
+    background-color: var(--accent-pink);
+    color: white;
+}
+
+.yes-btn:hover, .submit-btn:hover {
+    background-color: var(--accent-pink-hover);
+}
+
+.no-btn {
+    background-color: #e8e1d7;
+    color: var(--text-main);
+    position: absolute;
+    z-index: 10;
+    transition: all 0.1s ease;
+}
+
+.header-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+#dateForm {
+    width: 100%;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+input[type="date"], input[type="time"] {
+    width: 100%;
+    padding: 16px;
+    border-radius: 20px;
+    border: 1px solid #e2dacd;
+    background-color: #fff;
+    color: var(--text-main);
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.food-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    padding: 16px;
+    border-radius: 18px;
+    border: 1px solid #e2dacd;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    user-select: none;
+}
+
+.food-option input {
+    accent-color: var(--accent-pink);
+    transform: scale(1.4);
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 18px;
+    border-radius: 20px;
+    font-size: 22px;
+}
+
+.final-text {
+    font-size: 30px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+#chosenTime {
+    color: var(--accent-pink-hover);
+    text-decoration: underline;
+}
+
+.subtext {
+    font-size: 16px;
+    font-style: italic;
+    opacity: 0.7;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.signature-container {
+    margin-bottom: 25px;
+}
+
+.love-note {
+    font-size: 18px;
+    font-style: italic;
+    color: var(--text-main);
+    opacity: 0.8;
+}
+
+.lover-name {
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--accent-pink-hover);
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.hearts {
+    font-size: 28px;
+    letter-spacing: 8px;
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 26px; }
+    h2 { font-size: 28px; }
+    .food-grid { grid-template-columns: 1fr; }
+    .btn { font-size: 18px; padding: 12px 25px; }
+    .final-text { font-size: 24px; }
+}

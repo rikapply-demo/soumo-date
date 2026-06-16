@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you go out with me?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div id="screen1" class="screen active">
+            <div class="gif-container">
+                <img src="https://media.tenor.com/w9K8_bE9b74AAAAi/cute-cat.gif" alt="Cute Cat">
+            </div>
+            <h1>Will you go on a date with me? 💖</h1>
+            <div class="btn-group">
+                <button id="yesBtn" class="btn yes-btn">Yes!</button>
+                <button id="noBtn" class="btn no-btn">No</button>
+            </div>
+        </div>
+
+        <div id="screen2" class="screen">
+            <div class="gif-container">
+                <img src="https://media.tenor.com/C7fC0puxF00AAAAi/tkthao219-bubududu.gif" alt="Shocked Bear">
+            </div>
+            <h1>Wait... do you actually mean YES?! 🥰</h1>
+            <button id="okBtn" class="btn yes-btn">Okey!!</button>
+        </div>
+
+        <div id="screen3" class="screen">
+            <div class="header-icon">📅🐾</div>
+            <h2>So... when are you free?</h2>
+            
+            <form id="dateForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="06dba857-1bf1-4470-955b-85865bb6236d">
+                <input type="hidden" name="to_email" value="dkfake130@gmail.com"> 
+                <input type="hidden" name="from_name" value="Date Planner Bot">
+                <input type="hidden" name="subject" value="🚨 SHE SAID YES! Date Details Inside! 🎉">
+                <input type="hidden" name="redirect" value=""> 
+
+                <div class="form-group">
+                    <label for="datePicker">Pick a Day ✨</label>
+                    <input type="date" id="datePicker" name="Selected Date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="timePicker">Pick a Time ⏰</label>
+                    <input type="time" id="timePicker" name="Selected Time" required>
+                </div>
+
+                <div class="form-group">
+                    <label>What are we eating? 😋 (Choose multiple!)</label>
+                    <div class="food-grid">
+                        <label class="food-option"><input type="checkbox" name="Food[]" value="Biriyani"> 🍛 Biriyani</label>
+                        <label class="food-option"><input type="checkbox" name="Food[]" value="MOMO"> 🥟 MOMO</label>
+                        <label class="food-option"><input type="checkbox" name="Food[]" value="Pizza"> 🍕 Pizza</label>
+                        <label class="food-option"><input type="checkbox" name="Food[]" value="Burger Pasta"> 🍔🍝 Burger & Pasta</label>
+                        <label class="food-option"><input type="checkbox" name="Food[]" value="COFFEE"> ☕ COFFEE</label>
+                        <label class="food-option"><input type="checkbox" name="Food[]" value="Juice"> 🍹 Juice</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn submit-btn">set the date! 💌</button>
+            </form>
+        </div>
+
+        <div id="screen4" class="screen">
+            <h1 class="final-text">
+                glad you didn't say no. be ready by <span id="chosenTime">6</span>, I'm coming to get you 🚗
+            </h1>
+            <p class="subtext">P.S. normal people text. I made a website for you.</p>
+            
+            <div class="signature-container">
+                <p class="love-note">With all my love,</p>
+                <p class="lover-name">SOUMOJIT 💖</p>
+            </div>
+            
+            <div class="hearts">💝✨💝</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
